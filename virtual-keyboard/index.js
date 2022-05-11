@@ -226,7 +226,15 @@ function keyUp(event) {
       isUpperCase = false;
       keyboard.childNodes.forEach((key) => {
         if (key.dataset.shift) {
+          if (lang === 'en') {
           key.textContent = key.dataset.key;
+          } else if (lang === 'ru') {
+            if (key.dataset.ru) {
+              key.textContent = key.dataset.ru
+            } else {
+              key.textContent = key.dataset.key;
+            }
+          }
         }
       });
     }

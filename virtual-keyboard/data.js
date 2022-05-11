@@ -252,7 +252,7 @@ const data = [
     {
         "key": ",",
         "ru":"б",
-        "code": "NumpadDecimal",
+        "code": "NumpadDecimalComm",
         "shift":"<"
     },
     {
