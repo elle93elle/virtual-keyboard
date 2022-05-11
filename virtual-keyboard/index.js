@@ -654,6 +654,13 @@ function keyDown(event) {
         && event.code !== 'Backspace'
       ) {
         textarea.setRangeText(
+          textarea.selectionStart % 112 === 0 && textarea.selectionStart !== 0 ? '\n' : '',
+          textarea.selectionStart,
+          textarea.selectionEnd,
+          'end',
+        );
+
+        textarea.setRangeText(
           isUpperCase
             ? key.innerHTML.toUpperCase()
             : key.innerHTML.toLowerCase(),
@@ -715,10 +722,10 @@ function keyUp(event) {
   shift = false;
   alt = false;
   event.preventDefault();
-  keyboard.childNodes.forEach((key) => {
-    if (key.dataset.code === event.code) {
+  keyboard.childNodes.forEach((item) => {
+    if (item.dataset.code === event.code) {
       event.preventDefault();
-      key.classList.remove('pressed');
+      item.classList.remove('pressed');
       if (event.code === 'CapsLock') {
         onCapslock();
       }

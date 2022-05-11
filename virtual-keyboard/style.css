@@ -58,6 +58,7 @@ body {
   resize: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  min-height: 100px;
 }
 
 .text:focus {
