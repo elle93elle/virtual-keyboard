@@ -49,9 +49,6 @@ body {
     margin-top: 50px;
     resize: none;
     transition: 0.2s;
-    white-space: pre;
-    overflow: hidden;
-    text-overflow: ellipsis;
     
     &:focus {
         outline: 4px solid #f5d760;
